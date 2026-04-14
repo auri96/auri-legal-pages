@@ -1,0 +1,442 @@
+/* ============================================
+   AURI LEGAL PAGES - STYLES
+   Design System: The Luminous Vault
+   ============================================ */
+
+/* === VARIABLES === */
+:root {
+  /* Colors */
+  --surface: #0A0E1A;
+  --surface-container: #1A1F2F;
+  --surface-container-high: #252B3D;
+  
+  --on-surface: #E8ECF4;
+  --on-surface-variant: #BEC4D0;
+  --on-surface-muted: #8A91A3;
+  
+  --primary: #00F2FF;
+  --primary-dim: rgba(0, 242, 255, 0.1);
+  --secondary: #8776FF;
+  --tertiary: #00F262;
+  
+  --border: rgba(255, 255, 255, 0.1);
+  
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: var(--spacing-md);
+  color: var(--on-surface);
+}
+
+h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: var(--spacing-xs);
+  margin-top: var(--spacing-lg);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--on-surface);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--on-surface-variant);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* === HEADER & NAV === */
+header {
+  background: var(--surface-container);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  padding: var(--spacing-sm) 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--spacing-md);
+  list-style: none;
+}
+
+nav ul li a {
+  color: var(--on-surface-variant);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* === CONTAINER === */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* === MAIN CONTENT === */
+main {
+  padding: var(--spacing-xl) 0;
+  min-height: 80vh;
+}
+
+.legal-document {
+  background: var(--surface-container);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .legal-document {
+    padding: var(--spacing-xl);
+  }
+}
+
+.metadata {
+  font-size: 0.875rem;
+  color: var(--on-surface-muted);
+  padding: var(--spacing-sm);
+  background: var(--primary-dim);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* === LISTS === */
+ul, ol {
+  margin-left: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  color: var(--on-surface-variant);
+}
+
+li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* === SECTIONS === */
+section {
+  margin-bottom: var(--spacing-xl);
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* === TABLES === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-md) 0;
+  background: var(--surface-container-high);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+th, td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--primary-dim);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* === CODE BLOCKS === */
+code {
+  background: var(--surface-container-high);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: var(--tertiary);
+}
+
+pre {
+  background: var(--surface-container-high);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* === SUPPORT PAGE SPECIFIC === */
+.support-page .lead {
+  font-size: 1.125rem;
+  color: var(--on-surface-variant);
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-cards {
+  display: grid;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+@media (min-width: 768px) {
+  .contact-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: var(--surface-container-high);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  color: var(--primary);
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* === FAQ === */
+.faq-item {
+  background: var(--surface-container-high);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-sm);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--primary);
+}
+
+.faq-item summary {
+  padding: var(--spacing-sm) var(--spacing-md);
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--on-surface);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  color: var(--on-surface-variant);
+}
+
+/* === EXTERNAL ENTITY === */
+.external-entity {
+  background: var(--surface-container-high);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--secondary);
+  margin: var(--spacing-md) 0;
+}
+
+.external-entity h3 {
+  color: var(--secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* === SUPPORT CATEGORIES === */
+.support-categories {
+  list-style: none;
+  margin-left: 0;
+}
+
+.support-categories li {
+  padding: var(--spacing-sm);
+  border-left: 3px solid var(--primary);
+  background: var(--surface-container-high);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* === FOOTER === */
+.document-footer {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--on-surface-muted);
+  font-size: 0.875rem;
+}
+
+.document-footer p {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* === HR === */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--spacing-lg) 0;
+}
+
+/* === HIGHLIGHTS === */
+strong {
+  color: var(--on-surface);
+  font-weight: 600;
+}
+
+mark {
+  background: var(--primary-dim);
+  color: var(--primary);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  nav ul {
+    gap: var(--spacing-sm);
+  }
+}
+
+/* === PRINT STYLES === */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  header, nav {
+    display: none;
+  }
+  
+  .legal-document {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}
