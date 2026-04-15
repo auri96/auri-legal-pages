@@ -10,9 +10,9 @@ Documentación legal de Auri alojada en GitHub Pages.
 
 ## URLs
 
-- https://auri.com/privacy
-- https://auri.com/terms
-- https://auri.com/support
+- https://aurifinanzas.com/privacy
+- https://aurifinanzas.com/terms
+- https://aurifinanzas.com/support
 
 ## Tecnología
 
